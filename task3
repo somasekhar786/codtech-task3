@@ -1,0 +1,82 @@
+In this join practices task i have taken the example of library manangement system
+database to practices the joins
+as you can see these are the types of joins
+by using the syntax of joins we have implemented the some examples
+
+INNER JOIN:
+syntax:
+SELECT column1, column2, ...FROM table1
+INNER JOIN table2 ON table1.common_column = table2.common_column;
+example:
+select books.book_id ,transactions.book_id  from books 
+inner join transactions   on books.book_id=transactions.book_id;
+
+LEFT JOIN:
+syntax:
+SELECT column1, column2, ...
+FROM table1
+LEFT JOIN table2 ON table1.common_column = table2.common_column;
+example:
+select books.book_id ,transactions.book_id  from books 
+left join transactions   on books.book_id=transactions.book_id;
+
+RIGHT JOIN:
+syntax:
+SELECT column1, column2, ...
+FROM table1
+RIGHT JOIN table2 ON table1.common_column = table2.common_column;
+
+example:
+select members.first_name,transactions.book_id from members
+right join transactions   on members.member_id=transactions.member_id;
+
+FULL OUTER JOIN OR FULL JOIN:
+syntax:
+SELECT column1, column2, ...
+FROM table1
+LEFT JOIN table2 ON table1.common_column = table2.common_column 
+union 
+SELECT column1, column2, ...
+FROM table1
+RIGHT JOIN table2 ON table1.common_column = table2.common_column;
+
+example:
+select members.first_name,transactions.book_id from members
+right join transactions   on members.member_id=transactions.member_id
+union
+select members.first_name,transactions.book_id from members
+right join transactions   on members.member_id=transactions.member_id;
+
+CROSS JOIN:
+syntax:
+SELECT column1, column2, ...
+FROM table1
+CROSS JOIN table2;
+example:
+select books.book_id,transactions.book_id from books cross join transactions;
+
+SELF JOIN:
+syntax:
+SELECT 
+    alias1.column1, 
+    alias1.column2, 
+    alias2.column1, 
+    alias2.column2 
+FROM 
+    table_name alias1
+JOIN 
+    table_name alias2 ON alias1.common_column = alias2.common_column
+WHERE 
+    condition;
+
+example:
+SELECT 
+    t1.transaction_id AS Transaction1_ID, 
+    t1.book_id AS Book_ID, 
+    t1.member_id AS Member1_ID, 
+    t2.transaction_id AS Transaction2_ID, 
+    t2.member_id AS Member2_ID
+FROM 
+    transactions t1
+JOIN 
+    transactions t2 ON t1.book_id = t2.book_id AND t1.transaction_id <> t2.transaction_id;
