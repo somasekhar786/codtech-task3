@@ -15,7 +15,7 @@
 
 ### Project: join practice
 
-## Objective
+## Objective :
 
  **INNER JOIN**:
 
@@ -41,7 +41,7 @@ Finds all records with matches in either table. Unmatched records from both tabl
 
 *Example*: All employees and departments, showing unmatched records from both.
 
-### Key Activities
+### Key Activities :
 
 **Table Setup**:
 
@@ -69,7 +69,7 @@ Capture the query results for review and analysis.
 
 Describe when and why to use each join type.
 
-### technologies used
+### technologies used :
 
 - **mysql**:an open-source relational database management system (RDBMS) that is widely used 
             for web applications and small to medium-sized projects.
@@ -77,7 +77,7 @@ Describe when and why to use each join type.
 - **oracle**:a commercial relational database management system developed by Oracle 
              Corporation.
   
-### key insights
+### key insights :
 
 **Data Relationships**: Joins show how different tables relate to each other.
 
